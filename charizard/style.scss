@@ -1,0 +1,26 @@
+html{
+    background-color: black;
+}
+body{
+    display: flex;
+    justify-content: center;
+    margin: 75px auto;
+    // width: 80%;
+}
+#rightSide{
+    width: 300px;
+    height: 600px;
+    background-color: blue;
+}
+
+#leftSide{
+    width: 300px;
+    height: 600px;
+    background-color: blue;
+}
+
+#screen{
+    width: 900px;
+    height: 600px;
+    background-color: orange;
+}
