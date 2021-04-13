@@ -116,9 +116,12 @@ function createScreen(obj) {
   ///making tags inside of bottom section 
   const TABSHOLDER = document.createElement("div");
   TABSHOLDER.setAttribute('class', 'tabs-1');
-  const TABS = document.createElement('div');
-  for(let i = 1; i >= 7; i++){
-    const 
+  // const TABS = document.createElement('div');
+  for(let i = 1; i <= 7; i++){
+    const TABS = document.createElement('div');
+    TABS.setAttribute('class','tabs-3');
+    TABS.setAttribute('id',`stats-${i}`);
+    TABSHOLDER.appendChild(TABS);
   }
   
   const STATSBOX = document.createElement('div');
