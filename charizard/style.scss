@@ -1,3 +1,8 @@
+*{
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+}
+
 html{
     background-color: black;
 }
@@ -24,7 +29,35 @@ body{
 #screen{
     width: 900px;
     height: 600px;
-    background-color: orange;
+    #top{
+        display: flex;
+        #imgBorder{
+            height: 300px;
+            width: 300px;
+            background-color: black;
+            background-image: url(../../images/charizardMini.png);
+            background-position: center;
+            background-size: contain;
+            border-top: solid 8px white;
+            border-left: solid 8px white;
+            border-right: solid 8px white;
+        }
+        #basicInfo{
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            div{
+                padding-top: 60px;
+                padding-left: 80px;
+            }
+        }
+    }
+    #bottom{
+        height: 286px;
+        // background-color: aqua;
+        border-top: solid 8px white;
+        display: flex;
+    }
 }
 
 .topButtons{

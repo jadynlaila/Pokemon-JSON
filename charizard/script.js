@@ -117,7 +117,7 @@ function createScreen(obj) {
   const TABSHOLDER = document.createElement("div");
   TABSHOLDER.setAttribute('class', 'tabs-1');
   // const TABS = document.createElement('div');
-  for(let i = 1; i <= 7; i++){
+  for(let i = 1; i <= 6; i++){
     const TABS = document.createElement('div');
     TABS.setAttribute('class','tabs-3');
     TABS.setAttribute('id',`stats-${i}`);
