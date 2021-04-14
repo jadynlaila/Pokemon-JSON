@@ -1,3 +1,8 @@
+* {
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+}
+
 html {
   background-color: black;
 }
@@ -30,7 +35,48 @@ body {
 #screen {
   width: 900px;
   height: 600px;
-  background-color: orange;
+}
+
+#screen #top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#screen #top #imgBorder {
+  height: 300px;
+  width: 300px;
+  background-color: black;
+  background-image: url(../../images/charizardMini.png);
+  background-position: center;
+  background-size: contain;
+  border-top: solid 8px white;
+  border-left: solid 8px white;
+  border-right: solid 8px white;
+}
+
+#screen #top #basicInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+}
+
+#screen #top #basicInfo div {
+  padding-top: 60px;
+  padding-left: 80px;
+}
+
+#screen #bottom {
+  height: 286px;
+  border-top: solid 8px white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .topButtons {
