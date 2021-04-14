@@ -1,7 +1,11 @@
 let pokemonSelection = document.getElementById('difPokis');
 
 function makeLanding(){
-    let names = ['charizard', 'charmeleon', 'charmander']
+
+    //CREATES GAME CARDS FOR EACH POKEMON
+    let names = ['charizard', 'charmeleon', 'charmander'];
+    const POKEMONCARDS = document.createElement('div');
+    POKEMONCARDS.classList.add('allPokemonCards');
     for(let j in names){
         const BACKGROUND = document.createElement('div');
         BACKGROUND.classList.add('gameCard');
@@ -21,27 +25,48 @@ function makeLanding(){
         NINTENLOGOTOP.appendChild(NINTENDO);
         NINTENLOGOTOP.appendChild(DS);
         NINTENLOGOTOP.appendChild(TM);
-        const POKNAME = document.createElement('p');
-        POKNAME.textContent = `${names[j]}`;
-        POKNAME.classList.add('name');
         const IMGSDIV = document.createElement('div');
         IMGSDIV.classList.add('innerIms');
         const POKIIMG = document.createElement('img');
         POKIIMG.src = `images/${names[j]}GameCard.png`;
-        const RATINGIMG = document.createElement('img');
-        RATINGIMG.src = `images/rating.png`;
-        RATINGIMG.classList.add('ratingImg');
         console.log(POKIIMG.src)
         //NOT WORKIND ASK HOW TO FIX THIS
         INNERPART.classList.add(`${names[j]}`)
         INNERPART.appendChild(NINTENLOGOTOP);
         // INNERPART.appendChild(POKNAME);
         INNERPART.appendChild(POKIIMG);
-        // IMGSDIV.appendChild(RATINGIMG);
         // INNERPART.appendChild(IMGSDIV)
         BACKGROUND.appendChild(INNERPART);
-        pokemonSelection.appendChild(BACKGROUND);
+        POKEMONCARDS.appendChild(BACKGROUND);
     }
+
+    //CREATES NINTENDO DS THING
+    const MAINNINTENDO = document.createElement('div');
+    MAINNINTENDO.classList.add('wholeNintendo');
+    
+    const NINTENBLOCK = document.createElement('div');
+    NINTENBLOCK.classList.add('mainNintendo');
+
+
+    //PEN STYLING
+    const PENNINTENDO = document.createElement('div');
+        PENNINTENDO.classList.add('pen');
+        const LEFTPEN = document.createElement('div');
+        LEFTPEN.classList.add('leftPen');
+        const MIDPEN = document.createElement('div');
+        MIDPEN.classList.add('midPen');
+        const RIGHTPEN = document.createElement('div');
+        RIGHTPEN.textContent = `||`
+        RIGHTPEN.classList.add('rightPen');
+        PENNINTENDO.appendChild(LEFTPEN);
+        PENNINTENDO.appendChild(MIDPEN);
+        PENNINTENDO.appendChild(RIGHTPEN);
+
+    MAINNINTENDO.appendChild(PENNINTENDO);
+    MAINNINTENDO.appendChild(NINTENBLOCK);
+
+    pokemonSelection.appendChild(POKEMONCARDS);
+    pokemonSelection.appendChild(MAINNINTENDO);
 }
 
 makeLanding();
