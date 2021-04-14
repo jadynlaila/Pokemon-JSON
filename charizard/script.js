@@ -156,3 +156,5 @@ function createRightSide(obj) {
   rightSide.appendChild(DPAD);
   rightSide.appendChild(START);
 }
+
+const {}
