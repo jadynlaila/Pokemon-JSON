@@ -79,12 +79,15 @@ let input =
 let leftSide = document.getElementById("leftSide");
 let screen = document.getElementById("screen");
 let rightSide = document.getElementById("rightSide");
-const POPUP = document.createElement('div');
-POPUP.setAttribute('id', 'popup');
-screen.appendChild(POPUP);
+///
 const FADE = document.createElement('div');
 FADE.setAttribute('id','menuOverlay');
 screen.appendChild(FADE);
+const POPUP = document.createElement('div');
+POPUP.setAttribute('id','popupStyle');
+screen.appendChild(POPUP);
+
+
 
 init(input);
 function init(input) {
@@ -169,8 +172,46 @@ function createRightSide(obj) {
   rightSide.appendChild(START);
 }
 
+
+///popup menu
+
+let menuHeading = document.createElement('h1');
+menuHeading.textContent = 'MENU';
+
+let button1 = document.createElement('a');
+button1.setAttribute('id','button1');
+button1.textContent = 'Charmeleon';
+button1.href = '../charmeleon/charmeleon.html'
+
+let button2 = document.createElement('a');
+button2.setAttribute('id','button2');
+button2.textContent = 'Charmander';
+button2.href = '../charmander/charmander.html'
+
+let button3 = document.createElement('a');
+button3.setAttribute('id','button3');
+button3.textContent = 'Charizard';
+button3.href = 'charizard.html'
+
+
+let close = document.createElement('a');
+close.setAttribute('id','closeButton');
+close.textContent = 'Close';
+close.addEventListener('click','closeMenu');
+
+function closeMenu(){
+  POPUP.style.display = 'none';
+  FADE.style.display = 'none'
+}
+
+
 function openMenu(){
   POPUP.style.display = 'block';
   FADE.style.display="block";
+  POPUP.appendChild(menuHeading);
+  POPUP.appendChild(button1);
+  POPUP.appendChild(button2);
+  POPUP.appendChild(button3);
+  POPUP.appendChild(close);
 }
 

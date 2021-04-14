@@ -85,7 +85,7 @@ body {
   background-color: blueviolet;
 }
 
-#POPUP {
+#popupStyle {
   display: none;
   position: absolute;
   top: 25%;
@@ -93,10 +93,41 @@ body {
   width: 50%;
   height: 50%;
   padding: 16px;
-  border: 16px solid orange;
-  background-color: white;
+  border: 16px solid gray;
+  background-color: black;
   z-index: 1002;
   overflow: auto;
+}
+
+#popupStyle h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-text-decoration: underline 4px gray;
+          text-decoration: underline 4px gray;
+  margin-top: 0;
+}
+
+#popupStyle a {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid gray;
+  margin-bottom: 40px;
+  font-size: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2px 5px;
+  text-decoration: none;
+}
+
+#popupStyle #closeButton {
+  font-size: 30px;
+  margin-bottom: 0;
 }
 
 #menuOverlay {
@@ -107,8 +138,10 @@ body {
   width: 100%;
   height: 100%;
   background-color: black;
-  z-index: 1000;
+  z-index: 1001;
   opacity: 0.8;
   filter: alpha(opacity=50);
+  -webkit-transition: 5s all;
+  transition: 5s all;
 }
 /*# sourceMappingURL=style.css.map */
