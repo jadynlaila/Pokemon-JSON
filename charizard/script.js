@@ -82,10 +82,10 @@ let screen = document.getElementById("screen");
 let rightSide = document.getElementById("rightSide");
 ///
 const FADE = document.createElement('div');
-FADE.setAttribute('id','menuOverlay');
+FADE.setAttribute('id', 'menuOverlay');
 screen.appendChild(FADE);
 const POPUP = document.createElement('div');
-POPUP.setAttribute('id','popupStyle');
+POPUP.setAttribute('id', 'popupStyle');
 screen.appendChild(POPUP);
 
 
@@ -122,29 +122,28 @@ function createScreen(obj) {
   ///making the tags inside of the top section, need to add url to image src two lines below once we find an image
   //also added IDs
   const IMGBORDER = document.createElement('div');
-  const IMAGE = document.createElement('img');
-  IMAGE.setAttribute('src', '');
-  IMGBORDER.appendChild(IMAGE);
+  IMGBORDER.setAttribute('id','imgBorder');
+
   const BASICINFO = document.createElement('div');
   BASICINFO.setAttribute('id', 'basicInfo');
-  
 
-  const{name, weight, height, base_experience:baseExp} = obj;
+
+  const { name, weight, height, base_experience: baseExp } = obj;
   const BASICINFO1 = document.createElement('div');
   BASICINFO1.textContent = `Name: ${name}`;
-  BASICINFO1.setAttribute('id','name');
+  BASICINFO1.setAttribute('id', 'name');
 
   const BASICINFO2 = document.createElement('div');
   BASICINFO2.textContent = `Weight: ${weight}`;
-  BASICINFO2.setAttribute('id','weight');
+  BASICINFO2.setAttribute('id', 'weight');
 
   const BASICINFO3 = document.createElement('div');
   BASICINFO3.textContent = `Height: ${height}`;
-  BASICINFO3.setAttribute('id','height');
+  BASICINFO3.setAttribute('id', 'height');
 
   const BASICINFO4 = document.createElement('div');
   BASICINFO4.textContent = `Base Experience: ${baseExp}`;
-  BASICINFO4.setAttribute('id','baseExperience');
+  BASICINFO4.setAttribute('id', 'baseExperience');
 
   BASICINFO.appendChild(BASICINFO1);
   BASICINFO.appendChild(BASICINFO2);
@@ -156,25 +155,24 @@ function createScreen(obj) {
   TABSHOLDER.setAttribute('class', 'tabs-1');
 
   const SECONDTABSHOLDER = document.createElement('div');
-  SECONDTABSHOLDER.setAttribute('id','tabs-2');
+  SECONDTABSHOLDER.setAttribute('id', 'tabs-2');
   TABSHOLDER.appendChild(SECONDTABSHOLDER);
   // const TABS = document.createElement('div');
-  for(let i = 0; i <= 5; i++){
+  for (let i = 0; i <= 5; i++) {
     const TABSCONTAINER = document.createElement('div');
-    TABSCONTAINER.setAttribute('id','tab-3-container');
+    TABSCONTAINER.setAttribute('id', 'tab-3-container');
 
     const TABS = document.createElement('div');
     TABS.setAttribute('class', 'tabs-3');
 
     TABS.setAttribute('id', `stats-${i + 1}`);
-    const {stats} = obj;
-    console.log(i);
-    // let num = i5
-    let content = stats[i]['stat']['name'];
-    
+    const { stats } = obj;
+
+    let content = `${stats[i]['stat']['name']}  >`;
+
 
     const TABTITLE = document.createElement('div');
-    TABTITLE.setAttribute('id','tabTitle');
+    TABTITLE.setAttribute('id', 'tabTitle');
     TABTITLE.textContent = content;
 
     TABS.appendChild(TABTITLE);
@@ -185,21 +183,50 @@ function createScreen(obj) {
 
   const STATSBOX = document.createElement('div');
   STATSBOX.setAttribute('id', 'statsBox');
-  const ABILITYBOX1 = document.createElement("div");
-  ABILITYBOX1.setAttribute('id', 'abilityBox1');
-  const ABILITYBOX2 = document.createElement('div');
-  ABILITYBOX2.setAttribute('id', 'abilityBox2');
+  const STATNAME = document.createElement('div');
+  STATNAME.setAttribute('id', 'statName');
+  const BASESTAT = document.createElement('div');
+  BASESTAT.setAttribute('id', 'baseStat');
+  const EFFORT = document.createElement('div');
+  EFFORT.setAttribute('id', 'effort');
 
+  ///needs to be able to update, this is just boilerplate for now
+  STATNAME.textContent = 'HP';
+  BASESTAT.textContent = 'BASE STAT: 78';
+  EFFORT.textContent = 'EFFORT: 0';
+
+  STATSBOX.appendChild(STATNAME);
+  STATSBOX.appendChild(BASESTAT);
+  STATSBOX.appendChild(EFFORT);
+
+
+
+
+  const ABILITYBOX = document.createElement("div");
+  ABILITYBOX.setAttribute('id', 'abilityBox');
+
+  const ABILITYTITLE = document.createElement('div');
+  ABILITYTITLE.setAttribute('id', 'abilityTitle');
+  const ABILITYBOX1 = document.createElement('div');
+  ABILITYBOX1.setAttribute('id', 'ability1');
+  const ABILITYBOX2 = document.createElement('div');
+  ABILITYBOX2.setAttribute('id', 'ability2');
+
+  ABILITYTITLE.textContent = 'ABILITIES';
+  ABILITYBOX1.textContent = '>- BLAZE';
+  ABILITYBOX2.textContent = '>- SOLAR-POWER';
+
+  ABILITYBOX.appendChild(ABILITYTITLE);
+  ABILITYBOX.appendChild(ABILITYBOX1);
+  ABILITYBOX.appendChild(ABILITYBOX2);
   ///appending everything together
-  IMGBORDER.appendChild(IMAGE);
   TOP.appendChild(IMGBORDER);
   TOP.appendChild(BASICINFO);
 
   BOTTOM.appendChild(TABSHOLDER);
   //append tabs here when done
   BOTTOM.appendChild(STATSBOX);
-  BOTTOM.appendChild(ABILITYBOX1);
-  BOTTOM.appendChild(ABILITYBOX2);
+  BOTTOM.appendChild(ABILITYBOX);
   screen.appendChild(TOP);
   screen.appendChild(BOTTOM);
 }
@@ -224,19 +251,19 @@ let menuHeading = document.createElement('h1');
 menuHeading.textContent = ' MENU ';
 
 let button1 = document.createElement('a');
-button1.setAttribute('id','button1');
+button1.setAttribute('id', 'button1');
 button1.textContent = 'Charmeleon';
 button1.href = '../charmeleon/charmeleon.html'
 
 let button2 = document.createElement('a');
-button2.setAttribute('id','button2');
+button2.setAttribute('id', 'button2');
 button2.textContent = 'Charmander';
 button2.href = '../charmander/charmander.html'
 
 let button3 = document.createElement('a');
-button3.addEventListener('click',closeMenu);
+button3.addEventListener('click', closeMenu);
 button3.style.cursor = 'pointer';
-button3.setAttribute('id','button3');
+button3.setAttribute('id', 'button3');
 button3.textContent = 'Charizard';
 // button3.href = 'charizard.html'
 
@@ -244,19 +271,19 @@ button3.textContent = 'Charizard';
 let close = document.createElement('a');
 close.addEventListener('click', closeMenu);
 close.style.cursor = 'pointer';
-close.setAttribute('id','closeButton');
+close.setAttribute('id', 'closeButton');
 close.textContent = 'Close';
 // close.href = 'charizard.html'
 
-function closeMenu(){
+function closeMenu() {
   POPUP.style.display = 'none';
   FADE.style.display = 'none'
 }
 
 
-function openMenu(){
+function openMenu() {
   POPUP.style.display = 'block';
-  FADE.style.display="block";
+  FADE.style.display = "block";
   POPUP.appendChild(menuHeading);
   POPUP.appendChild(button1);
   POPUP.appendChild(button2);
