@@ -60,6 +60,8 @@ body {
         }
         #typeInfo{
             display: flex;
+            position: absolute;
+            right: 325px;
             #typeTitle{
                 padding-top: 3px;
             }
