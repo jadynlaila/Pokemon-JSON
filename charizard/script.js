@@ -76,6 +76,7 @@ let input =
 }`
 
 
+
 let leftSide = document.getElementById("leftSide");
 let screen = document.getElementById("screen");
 let rightSide = document.getElementById("rightSide");
@@ -121,23 +122,66 @@ function createScreen(obj) {
   ///making the tags inside of the top section, need to add url to image src two lines below once we find an image
   //also added IDs
   const IMGBORDER = document.createElement('div');
-
   const IMAGE = document.createElement('img');
   IMAGE.setAttribute('src', '');
   IMGBORDER.appendChild(IMAGE);
   const BASICINFO = document.createElement('div');
   BASICINFO.setAttribute('id', 'basicInfo');
+  
+
+  const{name, weight, height, base_experience:baseExp} = obj;
+  const BASICINFO1 = document.createElement('div');
+  BASICINFO1.textContent = `Name: ${name}`;
+  BASICINFO1.setAttribute('id','name');
+
+  const BASICINFO2 = document.createElement('div');
+  BASICINFO2.textContent = `Weight: ${weight}`;
+  BASICINFO2.setAttribute('id','weight');
+
+  const BASICINFO3 = document.createElement('div');
+  BASICINFO3.textContent = `Height: ${height}`;
+  BASICINFO3.setAttribute('id','height');
+
+  const BASICINFO4 = document.createElement('div');
+  BASICINFO4.textContent = `Base Experience: ${baseExp}`;
+  BASICINFO4.setAttribute('id','baseExperience');
+
+  BASICINFO.appendChild(BASICINFO1);
+  BASICINFO.appendChild(BASICINFO2);
+  BASICINFO.appendChild(BASICINFO3);
+  BASICINFO.appendChild(BASICINFO4);
 
   ///making tags inside of bottom section 
   const TABSHOLDER = document.createElement("div");
   TABSHOLDER.setAttribute('class', 'tabs-1');
+
+  const SECONDTABSHOLDER = document.createElement('div');
+  SECONDTABSHOLDER.setAttribute('id','tabs-2');
+  TABSHOLDER.appendChild(SECONDTABSHOLDER);
   // const TABS = document.createElement('div');
-  for(let i = 1; i <= 6; i++){
+  for(let i = 0; i <= 5; i++){
+    const TABSCONTAINER = document.createElement('div');
+    TABSCONTAINER.setAttribute('id','tab-3-container');
+
     const TABS = document.createElement('div');
     TABS.setAttribute('class', 'tabs-3');
-    TABS.setAttribute('id', `stats-${i}`);
-    TABSHOLDER.appendChild(TABS);
+
+    TABS.setAttribute('id', `stats-${i + 1}`);
+    const {stats} = obj;
+    console.log(i);
+    // let num = i5
+    let content = stats[i]['stat']['name'];
+    
+
+    const TABTITLE = document.createElement('div');
+    TABTITLE.setAttribute('id','tabTitle');
+    TABTITLE.textContent = content;
+
+    TABS.appendChild(TABTITLE);
+    TABSCONTAINER.appendChild(TABS);
+    SECONDTABSHOLDER.appendChild(TABSCONTAINER);
   }
+
 
   const STATSBOX = document.createElement('div');
   STATSBOX.setAttribute('id', 'statsBox');
@@ -172,12 +216,12 @@ function createRightSide(obj) {
   rightSide.appendChild(START);
 }
 
-const {}
+// const {}
 
 ///popup menu
 
 let menuHeading = document.createElement('h1');
-menuHeading.textContent = 'MENU';
+menuHeading.textContent = ' MENU ';
 
 let button1 = document.createElement('a');
 button1.setAttribute('id','button1');
@@ -190,15 +234,19 @@ button2.textContent = 'Charmander';
 button2.href = '../charmander/charmander.html'
 
 let button3 = document.createElement('a');
+button3.addEventListener('click',closeMenu);
+button3.style.cursor = 'pointer';
 button3.setAttribute('id','button3');
 button3.textContent = 'Charizard';
-button3.href = 'charizard.html'
+// button3.href = 'charizard.html'
 
 
 let close = document.createElement('a');
+close.addEventListener('click', closeMenu);
+close.style.cursor = 'pointer';
 close.setAttribute('id','closeButton');
 close.textContent = 'Close';
-close.addEventListener('click','closeMenu');
+// close.href = 'charizard.html'
 
 function closeMenu(){
   POPUP.style.display = 'none';
@@ -214,5 +262,9 @@ function openMenu(){
   POPUP.appendChild(button2);
   POPUP.appendChild(button3);
   POPUP.appendChild(close);
+  // let closeDom = document.getElementById('closeButton');
+  // let button3Dom = document.getElementById('button3');
+  // closeDom.addEventListener('click','closeMenu');
+  // button3Dom.addEventListener('click','closeMenu');
 }
 
