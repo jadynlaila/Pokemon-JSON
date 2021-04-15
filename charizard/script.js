@@ -183,6 +183,7 @@ function createScreen(obj) {
 
   const STATSBOX = document.createElement('div');
   STATSBOX.setAttribute('id', 'statsBox');
+
   const STATNAME = document.createElement('div');
   STATNAME.setAttribute('id', 'statName');
   const BASESTAT = document.createElement('div');
@@ -198,6 +199,8 @@ function createScreen(obj) {
   STATSBOX.appendChild(STATNAME);
   STATSBOX.appendChild(BASESTAT);
   STATSBOX.appendChild(EFFORT);
+
+
 
 
 
