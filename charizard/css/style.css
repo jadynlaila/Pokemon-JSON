@@ -1,6 +1,10 @@
 * {
   font-family: "Press Start 2P", cursive;
   color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 html {
@@ -14,19 +18,19 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 75px auto;
+  margin: 50px auto;
 }
 
 #rightSide {
   width: 300px;
-  height: 600px;
-  background-color: blue;
+  height: 650px;
+  background-color: black;
 }
 
 #leftSide {
   width: 300px;
-  height: 600px;
-  background-color: blue;
+  height: 650px;
+  background-color: black;
   z-index: 1000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -39,6 +43,8 @@ body {
 }
 
 #screen #top {
+  border-top: solid 8px white;
+  border-right: solid 8px white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,7 +57,9 @@ body {
   background-image: url(../../images/charizardMini.png);
   background-position: center;
   background-size: contain;
-  border: solid 8px orange;
+  border-left: solid 8px white;
+  border-right: solid 8px white;
+  border-bottom: solid 4px white;
 }
 
 #screen #top #basicInfo {
@@ -70,8 +78,36 @@ body {
 }
 
 #screen #top #basicInfo div {
-  padding-top: 60px;
+  padding-top: 50px;
   padding-left: 80px;
+}
+
+#screen #top #typeInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#screen #top #typeInfo #typeTitle {
+  padding-top: 3px;
+}
+
+#screen #top #typeInfo #type1 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 5px;
+  border-bottom: white solid 3px;
+  border-left: white solid 3px;
+}
+
+#screen #top #typeInfo #type2 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 5px;
+  border-bottom: white solid 3px;
+  border-left: white solid 3px;
 }
 
 #screen #bottom {
@@ -99,16 +135,18 @@ body {
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  background-color: aqua;
+  background-color: black;
   left: 40px;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  border-right: 0;
+  border-bottom: 0;
 }
 
 #screen #bottom .tabs-1 #tabs-2 #tab-3-container .tabs-3:hover {
-  background-color: #0051ff;
   cursor: pointer;
   left: 310px;
+  border-right: white solid 3px;
+  border-top: white solid 3px;
+  border-bottom: white solid 3px;
 }
 
 #screen #bottom .tabs-1 #tabs-2 #tab-3-container .tabs-3 #tabTitle {
@@ -117,6 +155,55 @@ body {
   margin: auto;
   text-align: right;
   line-height: 55px;
+}
+
+#screen #bottom #statsBox {
+  height: 290px;
+  width: 300px;
+  background-color: black;
+  border: solid white 3px;
+  margin-left: 22px;
+}
+
+#screen #bottom #abilityBox {
+  height: 290px;
+  width: 600px;
+  background-color: black;
+  border: solid white 3px;
+}
+
+#screen #bottom #abilityBox #abilityTitle {
+  font-size: 130%;
+  padding: 10px;
+  width: 100%;
+  border-bottom: white 3px solid;
+}
+
+#screen #bottom #abilityBox #ability1 {
+  padding-top: 40px;
+  padding-left: 15px;
+}
+
+#screen #bottom #abilityBox #ability2 {
+  padding-top: 40px;
+  padding-left: 15px;
+}
+
+#statsBox #statName {
+  font-size: 130%;
+  padding: 10px;
+  width: 100%;
+  border-bottom: white 3px solid;
+}
+
+#statsBox #baseStat {
+  padding-top: 40px;
+  padding-left: 15px;
+}
+
+#statsBox #effort {
+  padding-top: 40px;
+  padding-left: 15px;
 }
 
 .topButtons {
