@@ -71,7 +71,6 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   justify-items: center;
-  border: solid 8px orange;
   border-left: none;
   width: 600px;
   height: 300px;
@@ -206,12 +205,6 @@ body {
 #statsBox #effort {
   padding-top: 40px;
   padding-left: 15px;
-}
-
-.topButtons {
-  color: red;
-  width: 20px;
-  height: 20px;
 }
 
 .topButtons {
