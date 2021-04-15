@@ -1,34 +1,231 @@
-html{
+* {
+    font-family: "Press Start 2P", cursive;
+    color: white;
+    user-select: none;
+}
+
+html {
     background-color: black;
 }
 
-body{
+body {
     display: flex;
     justify-content: center;
-    margin: 75px auto;
+    margin: 50px auto;
     // width: 80%;
 }
 
-#rightSide{
+#rightSide {
     width: 300px;
-    height: 600px;
-    background-color: blue;
+    height: 650px;
+    background-color: black;
 }
 
-#leftSide{
+#leftSide {
     width: 300px;
-    height: 600px;
-    background-color: blue;
+    height: 650px;
+    background-color: black;
+    z-index: 1000;
+    display: flex;
+
+    
 }
 
-#screen{
+#screen {
     width: 900px;
     height: 600px;
-    background-color: orange;
+    #top {
+        border-top: solid 8px white;
+        border-right: solid 8px white;
+        display: flex;
+        #imgBorder {
+            height: 300px;
+            width: 300px;
+            background-color: black;
+            background-image: url(../../images/charizardMini.png);
+            background-position: center;
+            background-size: contain;
+            border-left: solid 8px white;
+            border-right: solid 8px white;
+            border-bottom: solid 4px white;
+        }
+        #basicInfo {
+            display: flex;
+            flex-direction: column;
+            justify-items: center;
+            // border: solid 8px orange;
+            border-left: none;
+            width: 600px;
+            height: 300px;
+            div {
+                padding-top: 50px;
+                padding-left: 80px;
+            }
+        }
+        #typeInfo{
+            display: flex;
+            #typeTitle{
+                padding-top: 3px;
+            }
+            #type1{
+                height: fit-content;
+                padding: 5px;
+                border-bottom: white solid 3px;
+                border-left: white solid 3px;
+            }
+            #type2{
+                height: fit-content;
+                padding: 5px;
+                border-bottom: white solid 3px;
+                border-left: white solid 3px;
+            }
+        }
+    }
+    #bottom {
+        height: 300px;
+        // background-color: aqua;
+        border-top: solid 8px white;
+        display: flex;
+        background-color: white;
+        .tabs-1 {
+            #tabs-2 {
+                position: absolute;
+                left: 0;
+                z-index: 1;
+                #tab-3-container {
+                    height: 50px;
+                    .tabs-3 {
+                        position: absolute;
+                        width: 300px;
+                        height: max-content;
+                        background-color: black;
+                        left: 40px;
+                        border-right: 0;
+                        border-bottom: 0;
+                        // transition: 0.3s ease-in-out;
+                        &:hover {
+                            // background-color: rgb(0, 81, 255);
+                            cursor: pointer;
+                            left: 310px;
+                            border-right: white solid 3px;
+                            border-top: white solid 3px;
+                            border-bottom: white solid 3px;
+                        }
+                        #tabTitle {
+                            width: 100%;
+                            height: 50px;
+                            margin: auto;
+                            text-align: right;
+                            line-height: 55px;
+                        }
+                    }
+                }
+            }
+        }
+        #statsBox{
+            height: 290px;
+            width: 300px;
+            background-color: black ;
+            border: solid white 3px;
+            margin-left: 22px;
+        }
+        #abilityBox{
+            height: 290px;
+            width: 600px;
+            background-color: black;
+            border: solid white 3px;
+            #abilityTitle{
+                font-size: 130%;
+                padding: 10px;
+                width: 100%;
+                border-bottom: white 3px solid;
+            }
+            #ability1{
+                padding-top: 40px;
+                padding-left: 15px;
+            }
+            #ability2{
+                padding-top: 40px;
+                padding-left: 15px;
+            }
+        }
+    }
 }
 
+#statsBox{
+    #statName{
+        font-size: 130%;
+        padding: 10px;
+        width: 100%;
+        border-bottom: white 3px solid;
+    }
+    #baseStat{
+        padding-top: 40px;
+        padding-left: 15px;
+    }
+    #effort{
+        padding-top: 40px;
+        padding-left: 15px;
+    }
+}
+
+
 .topButtons{
-    color: red;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 15px;
+    background-color: blueviolet;
+}
+
+
+#popupStyle{
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    padding: 16px;
+    border: 16px solid gray;
+    background-color: black;
+    z-index: 1002;
+    overflow: auto;
+    h1{
+        display: flex;
+        justify-content: center;
+        text-decoration: underline 4px gray;
+        margin-top: 0;
+    }    
+    a{
+        display: block;
+        // justify-content: center;
+        // text-align: center;
+        margin: 0 auto;
+        text-align: center;
+        border: 2px solid gray;
+        margin-bottom: 40px;
+        font-size: 40px;
+        width: fit-content;
+        padding: 2px 10px;
+        text-decoration: none;
+        
+    }
+    #closeButton{
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+
+}
+
+#menuOverlay{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    opacity: 0.8;
+    filter: alpha(opacity=50);
+    transition: 5s all;
 }
