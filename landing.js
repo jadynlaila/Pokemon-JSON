@@ -1,4 +1,8 @@
+$(function(){
+
+
 let pokemonSelection = document.getElementById('difPokis');
+let frontDS = document.getElementById('dsFront');
 
 function makeLanding(){
 
@@ -9,6 +13,9 @@ function makeLanding(){
     for(let j in names){
         const BACKGROUND = document.createElement('div');
         BACKGROUND.classList.add('gameCard');
+        BACKGROUND.setAttribute('id', `${names[j]}`);
+        BACKGROUND.setAttribute('id', `gameCard`);
+        BACKGROUND.classList.add(`${names[j]}`);
         const INNERPART = document.createElement('div');
         INNERPART.classList.add('innsideArea');
         const NINTENLOGOTOP = document.createElement('div');
@@ -31,7 +38,8 @@ function makeLanding(){
         POKIIMG.src = `images/${names[j]}GameCard.png`;
         console.log(POKIIMG.src)
         //NOT WORKIND ASK HOW TO FIX THIS
-        INNERPART.classList.add(`${names[j]}`)
+        INNERPART.classList.add(`${names[j]}`);
+        INNERPART.setAttribute('id', `${names[j]}`)
         INNERPART.appendChild(NINTENLOGOTOP);
         // INNERPART.appendChild(POKNAME);
         INNERPART.appendChild(POKIIMG);
@@ -43,10 +51,16 @@ function makeLanding(){
     //CREATES NINTENDO DS THING
     const MAINNINTENDO = document.createElement('div');
     MAINNINTENDO.classList.add('wholeNintendo');
-    
+
+    //THIS IS THE MAIN RECTANGLE
     const NINTENBLOCK = document.createElement('div');
     NINTENBLOCK.classList.add('mainNintendo');
-
+    const ONERECT = document.createElement('a');
+    const TWORECT = document.createElement('a');
+    ONERECT.textContent = `o`;
+    TWORECT.textContent = `o`;
+    NINTENBLOCK.appendChild(ONERECT);
+    NINTENBLOCK.appendChild(TWORECT);
 
     //PEN STYLING
     const PENNINTENDO = document.createElement('div');
@@ -66,11 +80,34 @@ function makeLanding(){
     MAINNINTENDO.appendChild(NINTENBLOCK);
 
     pokemonSelection.appendChild(POKEMONCARDS);
-    pokemonSelection.appendChild(MAINNINTENDO);
+    frontDS.appendChild(MAINNINTENDO);
 }
 
+
+
 makeLanding();
+let selectPokemon = function(){
+    let arr = this.classList;
+    const POKENAME = arr[1];
+
+    if(POKENAME == 'charizard'){
+        document.getElementById(POKENAME).style.left = `700px`;
+    }else if(POKENAME == 'charmander'){
+        document.getElementById(POKENAME).style.right =  `700px`;
+    }
+    document.getElementById(POKENAME).style.top = '330px';
+}
+
+
+
+
+
+document.getElementById('charizard').addEventListener('click', selectPokemon);
+document.getElementById('charmander').addEventListener('click', selectPokemon);
+document.getElementById('charmeleon').addEventListener('click', selectPokemon);
+
+});
 // function init(string){
 //     let superStr = JSON.parse(string);
 //     makeLanding(string);
-// }
+// }})
