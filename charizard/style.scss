@@ -1,6 +1,7 @@
 * {
     font-family: "Press Start 2P", cursive;
     color: white;
+    user-select: none;
 }
 
 html {
@@ -10,20 +11,20 @@ html {
 body {
     display: flex;
     justify-content: center;
-    margin: 75px auto;
+    margin: 50px auto;
     // width: 80%;
 }
 
 #rightSide {
     width: 300px;
-    height: 600px;
-    background-color: blue;
+    height: 650px;
+    background-color: black;
 }
 
 #leftSide {
     width: 300px;
-    height: 600px;
-    background-color: blue;
+    height: 650px;
+    background-color: black;
     z-index: 1000;
     display: flex;
 
@@ -34,6 +35,8 @@ body {
     width: 900px;
     height: 600px;
     #top {
+        border-top: solid 8px white;
+        border-right: solid 8px white;
         display: flex;
         #imgBorder {
             height: 300px;
@@ -42,17 +45,35 @@ body {
             background-image: url(../../images/charizardMini.png);
             background-position: center;
             background-size: contain;
-            border-top: solid 8px white;
             border-left: solid 8px white;
             border-right: solid 8px white;
+            border-bottom: solid 4px white;
         }
         #basicInfo {
             display: flex;
             flex-direction: column;
             justify-items: center;
             div {
-                padding-top: 60px;
+                padding-top: 50px;
                 padding-left: 80px;
+            }
+        }
+        #typeInfo{
+            display: flex;
+            #typeTitle{
+                padding-top: 3px;
+            }
+            #type1{
+                height: fit-content;
+                padding: 5px;
+                border-bottom: white solid 3px;
+                border-left: white solid 3px;
+            }
+            #type2{
+                height: fit-content;
+                padding: 5px;
+                border-bottom: white solid 3px;
+                border-left: white solid 3px;
             }
         }
     }
@@ -73,13 +94,18 @@ body {
                         position: absolute;
                         width: 300px;
                         height: max-content;
-                        background-color: aqua;
+                        background-color: black;
                         left: 40px;
-                        transition: 0.3s ease-in-out;
+                        border-right: 0;
+                        border-bottom: 0;
+                        // transition: 0.3s ease-in-out;
                         &:hover {
-                            background-color: rgb(0, 81, 255);
+                            // background-color: rgb(0, 81, 255);
                             cursor: pointer;
                             left: 310px;
+                            border-right: white solid 3px;
+                            border-top: white solid 3px;
+                            border-bottom: white solid 3px;
                         }
                         #tabTitle {
                             width: 100%;
@@ -92,6 +118,50 @@ body {
                 }
             }
         }
+        #statsBox{
+            height: 290px;
+            width: 300px;
+            background-color: black ;
+            border: solid white 3px;
+            margin-left: 22px;
+        }
+        #abilityBox{
+            height: 290px;
+            width: 600px;
+            background-color: black;
+            border: solid white 3px;
+            #abilityTitle{
+                font-size: 130%;
+                padding: 10px;
+                width: 100%;
+                border-bottom: white 3px solid;
+            }
+            #ability1{
+                padding-top: 40px;
+                padding-left: 15px;
+            }
+            #ability2{
+                padding-top: 40px;
+                padding-left: 15px;
+            }
+        }
+    }
+}
+
+#statsBox{
+    #statName{
+        font-size: 130%;
+        padding: 10px;
+        width: 100%;
+        border-bottom: white 3px solid;
+    }
+    #baseStat{
+        padding-top: 40px;
+        padding-left: 15px;
+    }
+    #effort{
+        padding-top: 40px;
+        padding-left: 15px;
     }
 }
 
@@ -159,5 +229,3 @@ body {
     filter: alpha(opacity=50);
     transition: 5s all;
 }
-
-
