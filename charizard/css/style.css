@@ -9,7 +9,7 @@
 
 html {
   background-color: #8b8b8b;
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: 2s all;
   transition: 2s all;
 }
@@ -33,9 +33,59 @@ body {
 
 #rightSide .topButtons {
   width: 30px;
-  height: 15px;
-  background-color: blueviolet;
+  position: absolute;
+  height: 30px;
+  background-color: #3b3b3b;
+  border-radius: 30px;
   cursor: pointer;
+}
+
+#rightSide #start {
+  top: 580px;
+  right: 250px;
+}
+
+#rightSide #rightButtons {
+  padding-top: 240px;
+  margin: 0 auto;
+  height: 150px;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  grid-column: 50px 50px 50px;
+  overflow: hidden;
+}
+
+#rightSide #rightButtons #aBXY0, #rightSide #rightButtons #aBXY1, #rightSide #rightButtons #aBXY2, #rightSide #rightButtons #aBXY3, #rightSide #rightButtons #aBXY4, #rightSide #rightButtons #aBXY5, #rightSide #rightButtons #aBXY6, #rightSide #rightButtons #aBXY7, #rightSide #rightButtons #aBXY8 {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+#rightSide #rightButtons #aBXY0 #booten1, #rightSide #rightButtons #aBXY0 #booten3, #rightSide #rightButtons #aBXY0 #booten5, #rightSide #rightButtons #aBXY0 #booten7, #rightSide #rightButtons #aBXY1 #booten1, #rightSide #rightButtons #aBXY1 #booten3, #rightSide #rightButtons #aBXY1 #booten5, #rightSide #rightButtons #aBXY1 #booten7, #rightSide #rightButtons #aBXY2 #booten1, #rightSide #rightButtons #aBXY2 #booten3, #rightSide #rightButtons #aBXY2 #booten5, #rightSide #rightButtons #aBXY2 #booten7, #rightSide #rightButtons #aBXY3 #booten1, #rightSide #rightButtons #aBXY3 #booten3, #rightSide #rightButtons #aBXY3 #booten5, #rightSide #rightButtons #aBXY3 #booten7, #rightSide #rightButtons #aBXY4 #booten1, #rightSide #rightButtons #aBXY4 #booten3, #rightSide #rightButtons #aBXY4 #booten5, #rightSide #rightButtons #aBXY4 #booten7, #rightSide #rightButtons #aBXY5 #booten1, #rightSide #rightButtons #aBXY5 #booten3, #rightSide #rightButtons #aBXY5 #booten5, #rightSide #rightButtons #aBXY5 #booten7, #rightSide #rightButtons #aBXY6 #booten1, #rightSide #rightButtons #aBXY6 #booten3, #rightSide #rightButtons #aBXY6 #booten5, #rightSide #rightButtons #aBXY6 #booten7, #rightSide #rightButtons #aBXY7 #booten1, #rightSide #rightButtons #aBXY7 #booten3, #rightSide #rightButtons #aBXY7 #booten5, #rightSide #rightButtons #aBXY7 #booten7, #rightSide #rightButtons #aBXY8 #booten1, #rightSide #rightButtons #aBXY8 #booten3, #rightSide #rightButtons #aBXY8 #booten5, #rightSide #rightButtons #aBXY8 #booten7 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding-top: 18px;
+}
+
+#rightSide #rightButtons #aBXY1, #rightSide #rightButtons #aBXY3, #rightSide #rightButtons #aBXY5, #rightSide #rightButtons #aBXY7 {
+  background-color: #3b3b3b;
+  cursor: pointer;
+}
+
+#rightSide #rightButtons #aBXY1:hover, #rightSide #rightButtons #aBXY3:hover, #rightSide #rightButtons #aBXY5:hover, #rightSide #rightButtons #aBXY7:hover {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
 }
 
 #leftSide {
@@ -50,9 +100,16 @@ body {
 
 #leftSide .topButtons {
   width: 30px;
-  height: 15px;
-  background-color: blueviolet;
+  height: 30px;
+  background-color: #3b3b3b;
+  border-radius: 30px;
   cursor: pointer;
+}
+
+#leftSide #select {
+  position: absolute;
+  top: 520px;
+  right: 250px;
 }
 
 #leftSide #dpad {
@@ -72,7 +129,7 @@ body {
 #leftSide #dpad #dPadButton0, #leftSide #dpad #dPadButton1, #leftSide #dpad #dPadButton2, #leftSide #dpad #dPadButton3, #leftSide #dpad #dPadButton4, #leftSide #dpad #dPadButton5, #leftSide #dpad #dPadButton6, #leftSide #dpad #dPadButton7, #leftSide #dpad #dPadButton8 {
   height: 50px;
   width: 50px;
-  background-color: aqua;
+  background-color: #3b3b3b;
   cursor: pointer;
 }
 

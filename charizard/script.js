@@ -452,8 +452,8 @@ function createScreen(obj) {
   ABILITYBOX2.setAttribute('id', 'ability2');
 
   ABILITYTITLE.textContent = 'ABILITIES';
-  ABILITYBOX1.textContent = '>- BLAZE';
-  ABILITYBOX2.textContent = '>- SOLAR-POWER';
+  ABILITYBOX1.textContent = '- BLAZE';
+  ABILITYBOX2.textContent = '- SOLAR-POWER';
 
   ABILITYBOX.appendChild(ABILITYTITLE);
   ABILITYBOX.appendChild(ABILITYBOX1);
@@ -471,21 +471,69 @@ function createScreen(obj) {
 }
 
 function createRightSide(obj) {
-  const DPAD = document.createElement('div');
   const START = document.createElement('div');
+  const RIGHTBUTTONS = document.createElement('div');
   START.classList.add('topButtons');
-  DPAD.setAttribute('id', 'dpad');
   START.setAttribute('id', 'start');
+  RIGHTBUTTONS.setAttribute('id', 'rightButtons');
 
 
-  rightSide.appendChild(DPAD);
   rightSide.appendChild(START);
-  // for(let i = 0; i < 9; i++){
-  //   const ABXY = document.createElement('div');
-  //   DPADBUTTON.setAttribute('id', `aBXY${i}`);
-  //   DPAD.appendChild(ABXY);
-  // }
+  rightSide.appendChild(RIGHTBUTTONS);
+  for(let i = 0; i < 9; i++){
+    const ABXY = document.createElement('div');
+    const BOOTEN = document.createElement('div');
 
+    ABXY.setAttribute('id', `aBXY${i}`);
+    BOOTEN.setAttribute('id', `booten${i}`);
 
+    RIGHTBUTTONS.appendChild(ABXY);
+    ABXY.appendChild(BOOTEN);
+  }
 }
+
+booten1.textContent = 'Y'
+booten3.textContent = 'X'
+booten5.textContent = 'A'
+booten7.textContent = 'B'
+
+// const {}
+
+///popup menu
+
+let menuHeading = document.createElement('h1');
+menuHeading.textContent = ' MENU ';
+
+let button1 = document.createElement('a');
+button1.setAttribute('id', 'button1');
+button1.textContent = 'Charmeleon';
+button1.href = '../charmeleon/charmeleon.html'
+
+let button2 = document.createElement('a');
+button2.setAttribute('id', 'button2');
+button2.textContent = 'Charmander';
+button2.href = '../charmander/charmander.html'
+
+let button3 = document.createElement('a');
+button3.addEventListener('click', closeMenu);
+button3.style.cursor = 'pointer';
+button3.setAttribute('id', 'button3');
+button3.textContent = 'Charizard';
+// button3.href = 'charizard.html'
+
+
+let close = document.createElement('a');
+close.addEventListener('click', closeMenu);
+close.style.cursor = 'pointer';
+close.setAttribute('id', 'closeButton');
+close.textContent = 'Close';
+// close.href = 'charizard.html'
+
+function closeMenu() {
+  POPUP.style.display = 'none';
+  FADE.style.display = 'none'
+}
+
+
+
 
