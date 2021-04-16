@@ -5,30 +5,65 @@
 }
 
 html {
-    background-color: black;
+    background-color: #8b8b8b;
 }
 
 body {
     display: flex;
     justify-content: center;
     margin: 50px auto;
+    background-color: #8b8b8b;
     // width: 80%;
 }
 
 #rightSide {
     width: 300px;
     height: 650px;
-    background-color: black;
+    background-color: #8b8b8b;
+    .topButtons{
+        width: 30px;
+        height: 15px;
+        background-color: blueviolet;
+        cursor: pointer;
+    }
 }
 
 #leftSide {
     width: 300px;
     height: 650px;
-    background-color: black;
+    background-color: #8b8b8b;
     z-index: 1000;
     display: flex;
-
-    
+    .topButtons{
+        width: 30px;
+        height: 15px;
+        background-color: blueviolet;
+        cursor: pointer;
+    }
+    #dpad{
+        padding-top: 240px;
+        margin: 0 auto;
+        height: 150px;
+        width: 150px;
+        display: flex;
+        flex-wrap: wrap;
+        grid-column: 50px 50px 50px;
+        overflow: hidden;
+        #dPadButton0, #dPadButton1, #dPadButton2, #dPadButton3, #dPadButton4, #dPadButton5, #dPadButton6, #dPadButton7, #dPadButton8{
+            height: 50px;
+            width: 50px;
+            background-color: aqua;
+            cursor: pointer;
+            // border: solid black 5px;
+        }
+        #dPadButton4{
+            cursor: default;
+        }
+        #dPadButton0, #dPadButton2, #dPadButton6, #dPadButton8{
+            background-color: #8b8b8b;
+            cursor: default;
+        } 
+    }
 }
 
 #screen {
@@ -38,6 +73,7 @@ body {
         border-top: solid 8px white;
         border-right: solid 8px white;
         display: flex;
+        background-color: black;
         #imgBorder {
             height: 300px;
             width: 300px;
@@ -169,13 +205,6 @@ body {
         padding-top: 40px;
         padding-left: 15px;
     }
-}
-
-
-.topButtons{
-    width: 30px;
-    height: 15px;
-    background-color: blueviolet;
 }
 
 

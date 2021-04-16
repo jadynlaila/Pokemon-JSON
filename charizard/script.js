@@ -110,6 +110,11 @@ function createLeftSide(obj) {
   leftSide.appendChild(DPAD);
   leftSide.appendChild(SELECT);
 
+  for(let i = 0; i < 9; i++){
+    const DPADBUTTON = document.createElement('div');
+    DPADBUTTON.setAttribute('id', `dPadButton${i}`);
+    DPAD.appendChild(DPADBUTTON);
+  }
 }
 
 function createScreen(obj) {
@@ -241,6 +246,11 @@ function createRightSide(obj) {
 
   rightSide.appendChild(DPAD);
   rightSide.appendChild(START);
+  for(let i = 0; i < 9; i++){
+    const ABXY = document.createElement('div');
+    DPADBUTTON.setAttribute('id', `aBXY${i}`);
+    DPAD.appendChild(ABXY);
+  }
 }
 
 // const {}
