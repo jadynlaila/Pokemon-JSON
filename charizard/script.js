@@ -345,8 +345,8 @@ function createScreen(obj) {
   ABILITYBOX2.setAttribute('id', 'ability2');
 
   ABILITYTITLE.textContent = 'ABILITIES';
-  ABILITYBOX1.textContent = '>- BLAZE';
-  ABILITYBOX2.textContent = '>- SOLAR-POWER';
+  ABILITYBOX1.textContent = '- BLAZE';
+  ABILITYBOX2.textContent = '- SOLAR-POWER';
 
   ABILITYBOX.appendChild(ABILITYTITLE);
   ABILITYBOX.appendChild(ABILITYBOX1);
@@ -364,21 +364,31 @@ function createScreen(obj) {
 }
 
 function createRightSide(obj) {
-  const DPAD = document.createElement('div');
   const START = document.createElement('div');
+  const RIGHTBUTTONS = document.createElement('div');
   START.classList.add('topButtons');
-  DPAD.setAttribute('id', 'dpad');
   START.setAttribute('id', 'start');
+  RIGHTBUTTONS.setAttribute('id', 'rightButtons');
 
 
-  rightSide.appendChild(DPAD);
   rightSide.appendChild(START);
+  rightSide.appendChild(RIGHTBUTTONS);
   for(let i = 0; i < 9; i++){
     const ABXY = document.createElement('div');
-    DPADBUTTON.setAttribute('id', `aBXY${i}`);
-    DPAD.appendChild(ABXY);
+    const BOOTEN = document.createElement('div');
+
+    ABXY.setAttribute('id', `aBXY${i}`);
+    BOOTEN.setAttribute('id', `booten${i}`);
+
+    RIGHTBUTTONS.appendChild(ABXY);
+    ABXY.appendChild(BOOTEN);
   }
 }
+
+booten1.textContent = 'Y'
+booten3.textContent = 'X'
+booten5.textContent = 'A'
+booten7.textContent = 'B'
 
 // const {}
 

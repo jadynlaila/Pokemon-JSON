@@ -22,9 +22,44 @@ body {
     background-color: #8b8b8b;
     .topButtons{
         width: 30px;
-        height: 15px;
-        background-color: blueviolet;
+        position: absolute;
+        height: 30px;
+        background-color: rgb(59, 59, 59);
+        border-radius: 30px;
         cursor: pointer;
+    }
+    #start{
+        top: 580px;
+        right: 250px;
+    }
+    #rightButtons{
+        padding-top: 240px;
+        margin: 0 auto;
+        height: 150px;
+        width: 150px;
+        display: flex;
+        flex-wrap: wrap;
+        grid-column: 50px 50px 50px;
+        overflow: hidden;
+        #aBXY0, #aBXY1, #aBXY2, #aBXY3, #aBXY4, #aBXY5, #aBXY6, #aBXY7, #aBXY8{
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+            transition: .2s;
+            #booten1, #booten3, #booten5, #booten7{
+                height: fit-content;
+                width: fit-content;
+                margin: 0 auto;
+                padding-top: 18px;
+            }
+        }
+        #aBXY1, #aBXY3, #aBXY5, #aBXY7{
+            background-color: rgb(59, 59, 59);
+            cursor: pointer;
+            &:hover{
+                transform: scale(.97);
+            }
+        }
     }
 }
 
@@ -36,9 +71,15 @@ body {
     display: flex;
     .topButtons{
         width: 30px;
-        height: 15px;
-        background-color: blueviolet;
+        height: 30px;
+        background-color: rgb(59, 59, 59);
+        border-radius: 30px;
         cursor: pointer;
+    }
+    #select{
+        position: absolute;
+        top: 520px;
+        right: 250px;
     }
     #dpad{
         padding-top: 240px;
@@ -52,7 +93,7 @@ body {
         #dPadButton0, #dPadButton1, #dPadButton2, #dPadButton3, #dPadButton4, #dPadButton5, #dPadButton6, #dPadButton7, #dPadButton8{
             height: 50px;
             width: 50px;
-            background-color: aqua;
+            background-color: rgb(59, 59, 59);
             cursor: pointer;
             // border: solid black 5px;
         }
