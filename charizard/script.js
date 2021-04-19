@@ -88,10 +88,10 @@ const POPUP = document.createElement('div');
 POPUP.setAttribute('id', 'popupStyle');
 screen.appendChild(POPUP);
 
-$(window).on('load',function(){
-  const HTML = document.getElementById('html');
-  HTML.style.opacity = '1';
-});
+// $(window).on('load',function(){
+//   const HTML = document.getElementById('html');
+//   HTML.style.opacity = '1';
+// });
 
 init(input);
 function init(input) {
