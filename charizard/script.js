@@ -87,11 +87,33 @@ screen.appendChild(FADE);
 const POPUP = document.createElement('div');
 POPUP.setAttribute('id', 'popupStyle');
 screen.appendChild(POPUP);
+const body = document.getElementById('body');
 
-// $(window).on('load',function(){
-//   const HTML = document.getElementById('html');
-//   HTML.style.opacity = '1';
-// });
+const BLACKSCREEN = document.createElement('div');
+BLACKSCREEN.classList.add('blackScreen');
+body.appendChild(BLACKSCREEN);
+$(window).on('load', function () {
+  BLACKSCREEN.style.backgroundColor  = 'black';
+  setTimeout(function(){
+    BLACKSCREEN.style.transition = `.5s`;
+    BLACKSCREEN.style.opacity = '0';
+    setTimeout(function(){
+        BLACKSCREEN.style.zIndex = '-1'
+    }, 401)
+  },100)
+    
+    
+
+  
+});
+
+function makeScreenBlack() {
+
+  BLACKSCREEN.style.transition = `.5s`;
+  setTimeout(function () {
+    BLACKSCREEN.style.backgroundColor = 'black';
+  }, 1);
+};
 
 init(input);
 function init(input) {
@@ -114,64 +136,64 @@ function createLeftSide(obj) {
 
 
   const DPADBUTTON0 = document.createElement('div');
-  DPADBUTTON0.setAttribute('id',`dPadButton0`);
+  DPADBUTTON0.setAttribute('id', `dPadButton0`);
   DPAD.appendChild(DPADBUTTON0);
 
   const DPAD1WRAP = document.createElement('a');
   const DPADBUTTON1 = document.createElement('div');
-  DPADBUTTON1.setAttribute('id',`dPadButton1`);
-  DPADBUTTON1.addEventListener('click',dpadUp);
-  function dpadUp(){
+  DPADBUTTON1.setAttribute('id', `dPadButton1`);
+  DPADBUTTON1.addEventListener('click', makeScreenBlack);
+  function dpadUp() {
 
   }
   DPAD1WRAP.appendChild(DPADBUTTON1);
   DPAD.appendChild(DPAD1WRAP)
 
-  
-  const DPADBUTTON2  = document.createElement('div');
-  DPADBUTTON2.setAttribute('id',`dPadButton2`);
+
+  const DPADBUTTON2 = document.createElement('div');
+  DPADBUTTON2.setAttribute('id', `dPadButton2`);
   DPAD.appendChild(DPADBUTTON2);
-  
+
   const DPAD3WRAP = document.createElement('a');
   const DPADBUTTON3 = document.createElement('div');
-  DPADBUTTON3.setAttribute('id',`dPadButton3`);
-  DPADBUTTON3.addEventListener('click',dpadLeft);
-  function dpadLeft(){
-    DPAD3WRAP.href ='../charmeleon/charmeleon.html'
+  DPADBUTTON3.setAttribute('id', `dPadButton3`);
+  DPADBUTTON3.addEventListener('click', dpadLeft);
+  function dpadLeft() {
+    DPAD3WRAP.href = '../charmeleon/charmeleon.html'
   }
   DPAD3WRAP.appendChild(DPADBUTTON3);
   DPAD.appendChild(DPAD3WRAP);
 
 
-  const DPADBUTTON4  = document.createElement('div');
-  DPADBUTTON4.setAttribute('id',`dPadButton4`);
+  const DPADBUTTON4 = document.createElement('div');
+  DPADBUTTON4.setAttribute('id', `dPadButton4`);
   DPAD.appendChild(DPADBUTTON4);
 
   const DPAD5WRAP = document.createElement('a');
   const DPADBUTTON5 = document.createElement('div');
-  DPADBUTTON5.setAttribute('id',`dPadButton5`);
-  DPADBUTTON5.addEventListener('click',dpadRight);
+  DPADBUTTON5.setAttribute('id', `dPadButton5`);
+  DPADBUTTON5.addEventListener('click', dpadRight);
   DPAD.appendChild(DPADBUTTON5);
-  function dpadRight(){
-    DPAD5WRAP.href ='../charmander/charmander.html';
+  function dpadRight() {
+    DPAD5WRAP.href = '../charmander/charmander.html';
   }
   DPAD5WRAP.appendChild(DPADBUTTON5);
   DPAD.appendChild(DPAD5WRAP);
 
-  const DPADBUTTON6  = document.createElement('div');
-  DPADBUTTON6.setAttribute('id',`dPadButton6`);
+  const DPADBUTTON6 = document.createElement('div');
+  DPADBUTTON6.setAttribute('id', `dPadButton6`);
   DPAD.appendChild(DPADBUTTON6);
 
   const DPADBUTTON7 = document.createElement('div');
-  DPADBUTTON7.setAttribute('id',`dPadButton7`);
-  DPADBUTTON7.addEventListener('click',dpadDown);
-  function dpadDown(){
+  DPADBUTTON7.setAttribute('id', `dPadButton7`);
+  DPADBUTTON7.addEventListener('click', dpadDown);
+  function dpadDown() {
 
   }
   DPAD.appendChild(DPADBUTTON7);
 
-  const DPADBUTTON8  = document.createElement('div');
-  DPADBUTTON8.setAttribute('id',`dPadButton8`);
+  const DPADBUTTON8 = document.createElement('div');
+  DPADBUTTON8.setAttribute('id', `dPadButton8`);
   DPAD.appendChild(DPADBUTTON8);
 
   leftSide.appendChild(DPAD);
@@ -480,7 +502,7 @@ function createRightSide(obj) {
 
   rightSide.appendChild(START);
   rightSide.appendChild(RIGHTBUTTONS);
-  for(let i = 0; i < 9; i++){
+  for (let i = 0; i < 9; i++) {
     const ABXY = document.createElement('div');
     const BOOTEN = document.createElement('div');
 
@@ -533,6 +555,7 @@ function closeMenu() {
   POPUP.style.display = 'none';
   FADE.style.display = 'none'
 }
+
 
 
 
