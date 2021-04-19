@@ -1,6 +1,6 @@
     let pokemonSelection = document.getElementById('difPokis');
     let frontDS = document.getElementById('dsFront');
-    
+    let body = document.getElementById('body');
     function makeLanding(){
     
         //CREATES GAME CARDS FOR EACH POKEMON
@@ -85,15 +85,25 @@
     
     makeLanding();
 
+    function makeScreenBlack (){
+        const BLACKSCREEN = document.createElement('div');
+        BLACKSCREEN.classList.add('blackScreen');
+        body.appendChild(BLACKSCREEN);
+        BLACKSCREEN.style.transition = `2s`;
+        setTimeout(function(){
+            BLACKSCREEN.style.backgroundColor = 'black';
+        }, 1000)
+    };
+
     let selectPokemon = function(){
         let arr = this.classList;
         console.log(arr)
-        const POKENAME = arr[1];
+        const POKENAME = arr[2];
         console.log(POKENAME);
         let names = ['charizard', 'charmeleon', 'charmander'];
         for(let i of names){
             //PROBLEMS BUT THIS IS THE ONLY PLACE
-            document.getElementById(i).removeEventListener('click');
+            document.getElementById(i).removeEventListener('click', selectPokemon);
             document.getElementById(i).classList.remove('gamecardHover');
         }
         if(POKENAME == 'charmander'){
@@ -103,6 +113,7 @@
             setTimeout(function(){
                 document.getElementById(POKENAME).style.transition = '2.5s'
                 document.getElementById(POKENAME).style.margin = '500px 0 0 0';   
+                makeScreenBlack();
             }, 1501)
             return;
         }else{
@@ -111,13 +122,14 @@
             document.getElementById(POKENAME).style.boxShadow = '0 0 0 100000px rgba(0,0,0,.2)';
             document.getElementById(POKENAME).style.zIndex = '100';
             if(POKENAME == 'charmeleon'){
-                document.getElementById(POKENAME).style.left = '-60px';
+                document.getElementById(POKENAME).style.left = '-65px';
             }if(POKENAME == 'charizard'){
-                document.getElementById(POKENAME).style.right = '-60px';
+                document.getElementById(POKENAME).style.right = '-65px';
             }
 
             setTimeout(function(){
                 document.getElementById(POKENAME).style.margin = '500px 0 0 0';   
+                makeScreenBlack();
             }, 2600)
         }
 
