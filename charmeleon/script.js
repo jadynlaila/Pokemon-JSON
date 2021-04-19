@@ -311,7 +311,7 @@ function createScreen(obj) {
   TAB1.addEventListener('click', tab1Run);
   window.addEventListener('load', tab1Run);
   function tab1Run() {
-
+    
     STATNAME.textContent = `${stats[0]['stat']['name']}`;
     BASESTAT.textContent = `BASE STAT: ${stats[0]['base_stat']}`;
     EFFORT.textContent = `EFFORT: ${stats[0]['effort']}`;
@@ -321,7 +321,9 @@ function createScreen(obj) {
   }
   const TABTITLE1 = document.createElement('div');
   TABTITLE1.setAttribute('id', 'tabTitle');
-  TABTITLE1.textContent = `${stats[0]['stat']['name']} >`
+  TABTITLE1.classList.add('hp');
+  TABTITLE1.textContent = `${stats[0]['stat']['name']} >`;
+
   TAB1.appendChild(TABTITLE1);
   TABSCONTAINER1.appendChild(TAB1);
   SECONDTABSHOLDER.appendChild(TABSCONTAINER1);
@@ -345,6 +347,7 @@ function createScreen(obj) {
   TABTITLE2.setAttribute('id', 'tabTitle');
   TABTITLE2.textContent = `${stats[1]['stat']['name']} >`
   TAB2.appendChild(TABTITLE2);
+  TABTITLE2.classList.add('attack');
   TABSCONTAINER2.appendChild(TAB2);
   SECONDTABSHOLDER.appendChild(TABSCONTAINER2);
 
@@ -366,6 +369,7 @@ function createScreen(obj) {
   TABTITLE3.setAttribute('id', 'tabTitle');
   TABTITLE3.textContent = `${stats[2]['stat']['name']} >`
   TAB3.appendChild(TABTITLE3);
+  TABTITLE3.classList.add('defense');
   TABSCONTAINER3.appendChild(TAB3);
   SECONDTABSHOLDER.appendChild(TABSCONTAINER3);
 
@@ -387,6 +391,7 @@ function createScreen(obj) {
   TABTITLE4.setAttribute('id', 'tabTitle');
   TABTITLE4.textContent = `${stats[3]['stat']['name']} >`
   TAB4.appendChild(TABTITLE4);
+  TABTITLE4.classList.add('special-attack');
   TABSCONTAINER4.appendChild(TAB4);
   SECONDTABSHOLDER.appendChild(TABSCONTAINER4);
 
@@ -408,6 +413,7 @@ function createScreen(obj) {
   TABTITLE5.setAttribute('id', 'tabTitle');
   TABTITLE5.textContent = `${stats[4]['stat']['name']} >`
   TAB5.appendChild(TABTITLE5);
+  TABTITLE5.classList.add('special-defense');
   TABSCONTAINER5.appendChild(TAB5);
   SECONDTABSHOLDER.appendChild(TABSCONTAINER5);
 
@@ -429,6 +435,7 @@ function createScreen(obj) {
   TABTITLE6.setAttribute('id', 'tabTitle');
   TABTITLE6.textContent = `${stats[5]['stat']['name']} >`
   TAB6.appendChild(TABTITLE6);
+  TABTITLE4.classList.add('speed');
   TABSCONTAINER6.appendChild(TAB6);
   SECONDTABSHOLDER.appendChild(TABSCONTAINER6);
 
@@ -528,3 +535,8 @@ function closeMenu() {
   POPUP.style.display = 'none';
   FADE.style.display = 'none'
 }
+
+let traits = 0;
+let traitsArr = ['hp', 'attack', 'defense', 'special-attack', ]
+
+// document.getElementById('padButton1').addEventListener('click', function(){this.classList.add('hoverSelection');})

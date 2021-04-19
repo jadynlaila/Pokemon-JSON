@@ -85,7 +85,7 @@
     
     makeLanding();
 
-    function makeScreenBlack (){
+    function makeScreenBlack(){
         const BLACKSCREEN = document.createElement('div');
         BLACKSCREEN.classList.add('blackScreen');
         body.appendChild(BLACKSCREEN);
@@ -115,6 +115,10 @@
                 document.getElementById(POKENAME).style.margin = '500px 0 0 0';   
                 makeScreenBlack();
             }, 1501)
+            setTimeout(function(){
+                window.location.href = `${POKENAME}/${POKENAME}.html`;
+            }, 4500)
+
             return;
         }else{
             document.getElementById(POKENAME).style.transition = '2.5s'
@@ -131,6 +135,9 @@
                 document.getElementById(POKENAME).style.margin = '500px 0 0 0';   
                 makeScreenBlack();
             }, 2600)
+            setTimeout(function(){
+                window.location.href = `${POKENAME}/${POKENAME}.html`;
+            }, 5500)
         }
 
     }
