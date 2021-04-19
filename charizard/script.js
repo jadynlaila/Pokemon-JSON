@@ -99,12 +99,8 @@ $(window).on('load', function () {
     BLACKSCREEN.style.opacity = '0';
     setTimeout(function(){
         BLACKSCREEN.style.zIndex = '-1'
-    }, 401)
-  },100)
-    
-    
-
-  
+    }, 401);
+  },100);
 });
 
 function makeScreenBlack() {
