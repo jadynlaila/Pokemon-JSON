@@ -91,9 +91,10 @@ screen.appendChild(POPUP);
 init(input);
 function init(input) {
   let object = JSON.parse(input);
+  createRightSide(object);
   createLeftSide(object);
   createScreen(object);
-  createRightSide(object);
+  
 }
 
 function createLeftSide(obj) {
@@ -335,7 +336,6 @@ function createScreen(obj) {
   TAB2.setAttribute('class', 'tabs-3');
   TAB2.addEventListener('click', tab2Run)
   function tab2Run() {
-
     STATNAME.textContent = `${stats[1]['stat']['name']}`;
     BASESTAT.textContent = `BASE STAT: ${stats[1]['base_stat']}`;
     EFFORT.textContent = `EFFORT: ${stats[1]['effort']}`;
@@ -470,6 +470,46 @@ function createScreen(obj) {
   BOTTOM.appendChild(ABILITYBOX);
   screen.appendChild(TOP);
   screen.appendChild(BOTTOM);
+
+  function changeTabScreen(){
+    if(traits == 1){
+      tab1Run();
+    }else if(traits == 2){
+      tab2Run();
+    }else if(traits == 3){
+      tab3Run();
+    }else if(traits ==4){
+      tab4Run();
+    }else if(traits ==5){
+      tab5Run();
+    }else if(traits ==6){
+      tab6Run();
+    }
+  }
+  
+  let chooseTraitUp = function(){
+      traits++;
+      if(traits > 6){
+        traits = 1;
+      }
+    changeTabScreen();
+  };
+  
+
+  let chooseTraitDown = function(){
+    console.log('piwe')
+      traits--;
+      if(traits < 1){
+        traits = 6;
+      }
+      changeTabScreen();
+  }
+
+  let traits = 1;
+
+  document.getElementById('dPadButton1').addEventListener('click', chooseTraitUp);
+  document.getElementById('dPadButton7').addEventListener('click', chooseTraitDown);
+
 }
 
 function createRightSide(obj) {
@@ -498,6 +538,7 @@ function createRightSide(obj) {
     RIGHTBUTTONS.appendChild(ABXY);
     ABXY.appendChild(BOOTEN);
   }
+
 }
 
 booten1.textContent = 'Y'
@@ -542,7 +583,3 @@ function closeMenu() {
   FADE.style.display = 'none'
 }
 
-let traits = 0;
-let traitsArr = ['hp', 'attack', 'defense', 'special-attack', ]
-
-// document.getElementById('padButton1').addEventListener('click', function(){this.classList.add('hoverSelection');})
