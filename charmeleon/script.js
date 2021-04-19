@@ -473,14 +473,20 @@ function createScreen(obj) {
 }
 
 function createRightSide(obj) {
+  const STARTWRAP = document.createElement('a');
   const START = document.createElement('div');
   const RIGHTBUTTONS = document.createElement('div');
   START.classList.add('topButtons');
   START.setAttribute('id', 'start');
   RIGHTBUTTONS.setAttribute('id', 'rightButtons');
 
+  START.addEventListener('click', homePage);
+  function homePage(){
+    STARTWRAP.href = '../index.html';
+  }
 
-  rightSide.appendChild(START);
+  STARTWRAP.appendChild(START)
+  rightSide.appendChild(STARTWRAP);
   rightSide.appendChild(RIGHTBUTTONS);
   for (let i = 0; i < 9; i++) {
     const ABXY = document.createElement('div');

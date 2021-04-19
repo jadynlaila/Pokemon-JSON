@@ -89,27 +89,27 @@ POPUP.setAttribute('id', 'popupStyle');
 screen.appendChild(POPUP);
 const body = document.getElementById('body');
 
-const BLACKSCREEN = document.createElement('div');
-BLACKSCREEN.classList.add('blackScreen');
-body.appendChild(BLACKSCREEN);
-$(window).on('load', function () {
-  BLACKSCREEN.style.backgroundColor  = 'black';
-  setTimeout(function(){
-    BLACKSCREEN.style.transition = `.5s`;
-    BLACKSCREEN.style.opacity = '0';
-    setTimeout(function(){
-        BLACKSCREEN.style.zIndex = '-1'
-    }, 401);
-  },100);
-});
+// const BLACKSCREEN = document.createElement('div');
+// BLACKSCREEN.classList.add('blackScreen');
+// body.appendChild(BLACKSCREEN);
+// $(window).on('load', function () {
+//   BLACKSCREEN.style.backgroundColor  = 'black';
+//   setTimeout(function(){
+//     BLACKSCREEN.style.transition = `.5s`;
+//     BLACKSCREEN.style.opacity = '0';
+//     setTimeout(function(){
+//         BLACKSCREEN.style.zIndex = '-1'
+//     }, 401);
+//   },100);
+// });
 
-function makeScreenBlack() {
+// function makeScreenBlack() {
 
-  BLACKSCREEN.style.transition = `.5s`;
-  setTimeout(function () {
-    BLACKSCREEN.style.backgroundColor = 'black';
-  }, 1);
-};
+//   BLACKSCREEN.style.transition = `.5s`;
+//   setTimeout(function () {
+//     BLACKSCREEN.style.backgroundColor = 'black';
+//   }, 1);
+// };
 
 init(input);
 function init(input) {
@@ -138,7 +138,7 @@ function createLeftSide(obj) {
   const DPAD1WRAP = document.createElement('a');
   const DPADBUTTON1 = document.createElement('div');
   DPADBUTTON1.setAttribute('id', `dPadButton1`);
-  DPADBUTTON1.addEventListener('click', makeScreenBlack);
+  DPADBUTTON1.addEventListener('click', dpadUp);
   function dpadUp() {
 
   }
@@ -489,14 +489,20 @@ function createScreen(obj) {
 }
 
 function createRightSide(obj) {
+  const STARTWRAP = document.createElement('a');
   const START = document.createElement('div');
   const RIGHTBUTTONS = document.createElement('div');
   START.classList.add('topButtons');
   START.setAttribute('id', 'start');
   RIGHTBUTTONS.setAttribute('id', 'rightButtons');
 
+  START.addEventListener('click', homePage);
+  function homePage(){
+    STARTWRAP.href = '../index.html';
+  }
 
-  rightSide.appendChild(START);
+  STARTWRAP.appendChild(START)
+  rightSide.appendChild(STARTWRAP);
   rightSide.appendChild(RIGHTBUTTONS);
   for (let i = 0; i < 9; i++) {
     const ABXY = document.createElement('div');
@@ -511,6 +517,11 @@ function createRightSide(obj) {
 }
 
 booten1.textContent = 'Y'
+
+aBXY1.addEventListener('click',changePink);
+function changePink(){
+  $(`html`).style.backgroundColor = 'pink';
+}
 booten3.textContent = 'X'
 booten5.textContent = 'A'
 booten7.textContent = 'B'
