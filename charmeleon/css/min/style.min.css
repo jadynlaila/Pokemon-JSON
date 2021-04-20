@@ -1,2 +1,400 @@
-*{font-family:"Press Start 2P", cursive;color:white;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}html{background-color:#8b8b8b;opacity:1;-webkit-transition:2s all;transition:2s all}body{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;margin:50px auto;background-color:#8b8b8b}#rightSide{width:300px;height:650px;background-color:#8b8b8b}#rightSide .topButtons{width:30px;position:absolute;height:30px;background-color:#3b3b3b;border-radius:30px;cursor:pointer}#rightSide #start{top:580px;right:250px}#rightSide #rightButtons{padding-top:240px;margin:0 auto;height:150px;width:150px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;grid-column:50px 50px 50px;overflow:hidden}#rightSide #rightButtons #aBXY0,#rightSide #rightButtons #aBXY1,#rightSide #rightButtons #aBXY2,#rightSide #rightButtons #aBXY3,#rightSide #rightButtons #aBXY4,#rightSide #rightButtons #aBXY5,#rightSide #rightButtons #aBXY6,#rightSide #rightButtons #aBXY7,#rightSide #rightButtons #aBXY8{height:50px;width:50px;border-radius:50px;-webkit-transition:.2s;transition:.2s}#rightSide #rightButtons #aBXY0 #booten1,#rightSide #rightButtons #aBXY0 #booten3,#rightSide #rightButtons #aBXY0 #booten5,#rightSide #rightButtons #aBXY0 #booten7,#rightSide #rightButtons #aBXY1 #booten1,#rightSide #rightButtons #aBXY1 #booten3,#rightSide #rightButtons #aBXY1 #booten5,#rightSide #rightButtons #aBXY1 #booten7,#rightSide #rightButtons #aBXY2 #booten1,#rightSide #rightButtons #aBXY2 #booten3,#rightSide #rightButtons #aBXY2 #booten5,#rightSide #rightButtons #aBXY2 #booten7,#rightSide #rightButtons #aBXY3 #booten1,#rightSide #rightButtons #aBXY3 #booten3,#rightSide #rightButtons #aBXY3 #booten5,#rightSide #rightButtons #aBXY3 #booten7,#rightSide #rightButtons #aBXY4 #booten1,#rightSide #rightButtons #aBXY4 #booten3,#rightSide #rightButtons #aBXY4 #booten5,#rightSide #rightButtons #aBXY4 #booten7,#rightSide #rightButtons #aBXY5 #booten1,#rightSide #rightButtons #aBXY5 #booten3,#rightSide #rightButtons #aBXY5 #booten5,#rightSide #rightButtons #aBXY5 #booten7,#rightSide #rightButtons #aBXY6 #booten1,#rightSide #rightButtons #aBXY6 #booten3,#rightSide #rightButtons #aBXY6 #booten5,#rightSide #rightButtons #aBXY6 #booten7,#rightSide #rightButtons #aBXY7 #booten1,#rightSide #rightButtons #aBXY7 #booten3,#rightSide #rightButtons #aBXY7 #booten5,#rightSide #rightButtons #aBXY7 #booten7,#rightSide #rightButtons #aBXY8 #booten1,#rightSide #rightButtons #aBXY8 #booten3,#rightSide #rightButtons #aBXY8 #booten5,#rightSide #rightButtons #aBXY8 #booten7{height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;margin:0 auto;padding-top:18px}#rightSide #rightButtons #aBXY1,#rightSide #rightButtons #aBXY3,#rightSide #rightButtons #aBXY5,#rightSide #rightButtons #aBXY7{background-color:#3b3b3b;cursor:pointer}#rightSide #rightButtons #aBXY1:hover,#rightSide #rightButtons #aBXY3:hover,#rightSide #rightButtons #aBXY5:hover,#rightSide #rightButtons #aBXY7:hover{-webkit-transform:scale(0.97);transform:scale(0.97)}#leftSide{width:300px;height:650px;background-color:#8b8b8b;z-index:1000;display:-webkit-box;display:-ms-flexbox;display:flex}#leftSide .topButtons{width:30px;height:30px;background-color:#3b3b3b;border-radius:30px;cursor:pointer}#leftSide #select{position:absolute;top:520px;right:250px}#leftSide #dpad{padding-top:240px;margin:0 auto;height:150px;width:150px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;grid-column:50px 50px 50px;overflow:hidden}#leftSide #dpad #dPadButton0,#leftSide #dpad #dPadButton1,#leftSide #dpad #dPadButton2,#leftSide #dpad #dPadButton3,#leftSide #dpad #dPadButton4,#leftSide #dpad #dPadButton5,#leftSide #dpad #dPadButton6,#leftSide #dpad #dPadButton7,#leftSide #dpad #dPadButton8{height:50px;width:50px;background-color:#3b3b3b;cursor:pointer}#leftSide #dpad #dPadButton4{cursor:default}#leftSide #dpad #dPadButton0,#leftSide #dpad #dPadButton2,#leftSide #dpad #dPadButton6,#leftSide #dpad #dPadButton8{background-color:#8b8b8b;cursor:default}#screen{width:900px;height:600px}#screen #top{border-top:solid 8px white;border-right:solid 8px white;display:-webkit-box;display:-ms-flexbox;display:flex;background-color:black}#screen #top #imgBorder{height:300px;width:300px;background-color:black;background-image:url(../../images/charizardMini.png);background-position:center;background-size:contain;border-left:solid 8px white;border-right:solid 8px white;border-bottom:solid 4px white}#screen #top #basicInfo{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;justify-items:center;border-left:none;width:600px;height:300px}#screen #top #basicInfo div{padding-top:50px;padding-left:80px}#screen #top #typeInfo{display:-webkit-box;display:-ms-flexbox;display:flex;position:absolute;right:325px}#screen #top #typeInfo #typeTitle{padding-top:3px}#screen #top #typeInfo #type1{height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;padding:5px;border-bottom:white solid 3px;border-left:white solid 3px}#screen #top #typeInfo #type2{height:-webkit-fit-content;height:-moz-fit-content;height:fit-content;padding:5px;border-bottom:white solid 3px;border-left:white solid 3px}#screen #bottom{height:300px;border-top:solid 8px white;display:-webkit-box;display:-ms-flexbox;display:flex;background-color:white}#screen #bottom .tabs-1 #tabs-2{position:absolute;left:0;z-index:1}#screen #bottom .tabs-1 #tabs-2 #tab-3-container{height:50px}#screen #bottom .tabs-1 #tabs-2 #tab-3-container .tabs-3{position:absolute;width:300px;height:-webkit-max-content;height:-moz-max-content;height:max-content;background-color:black;left:40px;border-right:0;border-bottom:0}#screen #bottom .tabs-1 #tabs-2 #tab-3-container .tabs-3:hover{cursor:pointer;left:310px;border-right:white solid 3px;border-top:white solid 3px;border-bottom:white solid 3px}#screen #bottom .tabs-1 #tabs-2 #tab-3-container .tabs-3 #tabTitle{width:100%;height:50px;margin:auto;text-align:right;line-height:55px}#screen #bottom #statsBox{height:290px;width:300px;background-color:black;border:solid white 3px;margin-left:22px}#screen #bottom #abilityBox{height:290px;width:600px;background-color:black;border:solid white 3px}#screen #bottom #abilityBox #abilityTitle{font-size:130%;padding:10px;width:100%;border-bottom:white 3px solid}#screen #bottom #abilityBox #ability1{padding-top:40px;padding-left:15px}#screen #bottom #abilityBox #ability2{padding-top:40px;padding-left:15px}#statsBox #statName{font-size:130%;padding:10px;width:100%;border-bottom:white 3px solid}#statsBox #baseStat{padding-top:40px;padding-left:15px}#statsBox #effort{padding-top:40px;padding-left:15px}#popupStyle{display:none;position:absolute;top:25%;left:25%;width:50%;height:50%;padding:16px;border:16px solid gray;background-color:black;z-index:1002;overflow:auto}#popupStyle h1{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-text-decoration:underline 4px gray;text-decoration:underline 4px gray;margin-top:0}#popupStyle a{display:block;margin:0 auto;text-align:center;border:2px solid gray;margin-bottom:40px;font-size:40px;width:-webkit-fit-content;width:-moz-fit-content;width:fit-content;padding:2px 10px;text-decoration:none}#popupStyle #closeButton{font-size:30px;margin-bottom:0}#menuOverlay{display:none;position:absolute;top:0%;left:0%;width:100%;height:100%;background-color:black;z-index:1001;opacity:0.8;filter:alpha(opacity=50);-webkit-transition:5s all;transition:5s all}
+* {
+  font-family: "Press Start 2P", cursive;
+  color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+html {
+  background-color: #8b8b8b;
+  opacity: 1;
+  -webkit-transition: 2s all;
+  transition: 2s all;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 50px auto;
+  background-color: #8b8b8b;
+}
+
+/* Loader */
+.loader-wrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
+#rightSide {
+  width: 300px;
+  height: 650px;
+  background-color: #8b8b8b;
+}
+
+#rightSide .topButtons {
+  width: 30px;
+  position: absolute;
+  height: 30px;
+  background-color: #3b3b3b;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#rightSide #start {
+  top: 580px;
+  right: 250px;
+}
+
+#rightSide #rightButtons {
+  padding-top: 240px;
+  margin: 0 auto;
+  height: 150px;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  grid-column: 50px 50px 50px;
+  overflow: hidden;
+}
+
+#rightSide #rightButtons #aBXY0, #rightSide #rightButtons #aBXY1, #rightSide #rightButtons #aBXY2, #rightSide #rightButtons #aBXY3, #rightSide #rightButtons #aBXY4, #rightSide #rightButtons #aBXY5, #rightSide #rightButtons #aBXY6, #rightSide #rightButtons #aBXY7, #rightSide #rightButtons #aBXY8 {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+#rightSide #rightButtons #aBXY0 #booten1, #rightSide #rightButtons #aBXY0 #booten3, #rightSide #rightButtons #aBXY0 #booten5, #rightSide #rightButtons #aBXY0 #booten7, #rightSide #rightButtons #aBXY1 #booten1, #rightSide #rightButtons #aBXY1 #booten3, #rightSide #rightButtons #aBXY1 #booten5, #rightSide #rightButtons #aBXY1 #booten7, #rightSide #rightButtons #aBXY2 #booten1, #rightSide #rightButtons #aBXY2 #booten3, #rightSide #rightButtons #aBXY2 #booten5, #rightSide #rightButtons #aBXY2 #booten7, #rightSide #rightButtons #aBXY3 #booten1, #rightSide #rightButtons #aBXY3 #booten3, #rightSide #rightButtons #aBXY3 #booten5, #rightSide #rightButtons #aBXY3 #booten7, #rightSide #rightButtons #aBXY4 #booten1, #rightSide #rightButtons #aBXY4 #booten3, #rightSide #rightButtons #aBXY4 #booten5, #rightSide #rightButtons #aBXY4 #booten7, #rightSide #rightButtons #aBXY5 #booten1, #rightSide #rightButtons #aBXY5 #booten3, #rightSide #rightButtons #aBXY5 #booten5, #rightSide #rightButtons #aBXY5 #booten7, #rightSide #rightButtons #aBXY6 #booten1, #rightSide #rightButtons #aBXY6 #booten3, #rightSide #rightButtons #aBXY6 #booten5, #rightSide #rightButtons #aBXY6 #booten7, #rightSide #rightButtons #aBXY7 #booten1, #rightSide #rightButtons #aBXY7 #booten3, #rightSide #rightButtons #aBXY7 #booten5, #rightSide #rightButtons #aBXY7 #booten7, #rightSide #rightButtons #aBXY8 #booten1, #rightSide #rightButtons #aBXY8 #booten3, #rightSide #rightButtons #aBXY8 #booten5, #rightSide #rightButtons #aBXY8 #booten7 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding-top: 18px;
+}
+
+#rightSide #rightButtons #aBXY1, #rightSide #rightButtons #aBXY3, #rightSide #rightButtons #aBXY5, #rightSide #rightButtons #aBXY7 {
+  background-color: #3b3b3b;
+  cursor: pointer;
+}
+
+#rightSide #rightButtons #aBXY1:hover, #rightSide #rightButtons #aBXY3:hover, #rightSide #rightButtons #aBXY5:hover, #rightSide #rightButtons #aBXY7:hover {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+}
+
+#leftSide {
+  width: 300px;
+  height: 650px;
+  background-color: #8b8b8b;
+  z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#leftSide .topButtons {
+  width: 30px;
+  height: 30px;
+  background-color: #3b3b3b;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#leftSide #select {
+  position: absolute;
+  top: 520px;
+  right: 250px;
+}
+
+#leftSide #dpad {
+  padding-top: 240px;
+  margin: 0 auto;
+  height: 150px;
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  grid-column: 50px 50px 50px;
+  overflow: hidden;
+}
+
+#leftSide #dpad #dPadButton0, #leftSide #dpad #dPadButton1, #leftSide #dpad #dPadButton2, #leftSide #dpad #dPadButton3, #leftSide #dpad #dPadButton4, #leftSide #dpad #dPadButton5, #leftSide #dpad #dPadButton6, #leftSide #dpad #dPadButton7, #leftSide #dpad #dPadButton8 {
+  height: 50px;
+  width: 50px;
+  background-color: #3b3b3b;
+  cursor: pointer;
+}
+
+#leftSide #dpad #dPadButton4 {
+  cursor: default;
+}
+
+#leftSide #dpad #dPadButton0, #leftSide #dpad #dPadButton2, #leftSide #dpad #dPadButton6, #leftSide #dpad #dPadButton8 {
+  background-color: #8b8b8b;
+  cursor: default;
+}
+
+#screen {
+  width: 900px;
+  height: 600px;
+}
+
+#screen #top {
+  border-top: solid 8px white;
+  border-right: solid 8px white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: black;
+}
+
+#screen #top #imgBorder {
+  height: 300px;
+  width: 300px;
+  background-color: black;
+  background-image: url(../../images/charmeleonMini.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-left: solid 8px white;
+  border-right: solid 8px white;
+  border-bottom: solid 4px white;
+}
+
+#screen #top #basicInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+  border-left: none;
+  width: 600px;
+  height: 300px;
+}
+
+#screen #top #basicInfo div {
+  padding-top: 50px;
+  padding-left: 80px;
+}
+
+#screen #top #typeInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 325px;
+}
+
+#screen #top #typeInfo #typeTitle {
+  padding-top: 3px;
+}
+
+#screen #top #typeInfo #type1 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 5px;
+  border-bottom: white solid 3px;
+  border-left: white solid 3px;
+}
+
+#screen #top #typeInfo #type2 {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 5px;
+  border-bottom: white solid 3px;
+  border-left: white solid 3px;
+}
+
+#screen #bottom {
+  height: 300px;
+  border-top: solid 8px white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+}
+
+#screen #bottom .tabs-1 #tabs-2 {
+  position: absolute;
+  left: 0;
+  z-index: 1;
+}
+
+#screen #bottom .tabs-1 #tabs-2 #tab-3-container {
+  height: 50px;
+  text-transform: uppercase;
+}
+
+#screen #bottom .tabs-1 #tabs-2 #tab-3-container .tabs-3 {
+  position: absolute;
+  width: 300px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  background-color: black;
+  left: 40px;
+  border-right: 0;
+  border-bottom: 0;
+}
+
+#screen #bottom .tabs-1 #tabs-2 #tab-3-container .tabs-3:hover {
+  cursor: pointer;
+  left: 310px;
+  border-right: white solid 3px;
+  border-top: white solid 3px;
+  border-bottom: white solid 3px;
+}
+
+#screen #bottom .tabs-1 #tabs-2 #tab-3-container .tabs-3 #tabTitle {
+  width: 100%;
+  height: 50px;
+  margin: auto;
+  text-align: right;
+  line-height: 55px;
+}
+
+#screen #bottom #statsBox {
+  height: 290px;
+  width: 300px;
+  background-color: black;
+  border: solid white 3px;
+  margin-left: 22px;
+}
+
+#screen #bottom #statsBox #statName {
+  text-transform: uppercase;
+}
+
+#screen #bottom #abilityBox {
+  height: 290px;
+  width: 600px;
+  background-color: black;
+  border: solid white 3px;
+}
+
+#screen #bottom #abilityBox #abilityTitle {
+  font-size: 130%;
+  padding: 10px;
+  width: 100%;
+  border-bottom: white 3px solid;
+}
+
+#screen #bottom #abilityBox #ability1 {
+  padding-top: 40px;
+  padding-left: 15px;
+}
+
+#screen #bottom #abilityBox #ability2 {
+  padding-top: 40px;
+  padding-left: 15px;
+}
+
+.hoverSelection {
+  cursor: pointer;
+  left: 310px;
+  border-right: white solid 3px;
+  border-top: white solid 3px;
+  border-bottom: white solid 3px;
+}
+
+#statsBox #statName {
+  font-size: 130%;
+  padding: 10px;
+  width: 100%;
+  border-bottom: white 3px solid;
+}
+
+#statsBox #baseStat {
+  padding-top: 40px;
+  padding-left: 15px;
+}
+
+#statsBox #effort {
+  padding-top: 40px;
+  padding-left: 15px;
+}
+
+#popupStyle {
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  padding: 16px;
+  border: 16px solid gray;
+  background-color: black;
+  z-index: 1002;
+  overflow: auto;
+}
+
+#popupStyle h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-text-decoration: underline 4px gray;
+          text-decoration: underline 4px gray;
+  margin-top: 0;
+}
+
+#popupStyle a {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  border: 2px solid gray;
+  margin-bottom: 40px;
+  font-size: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 2px 10px;
+  text-decoration: none;
+}
+
+#popupStyle #closeButton {
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+#menuOverlay {
+  display: none;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1001;
+  opacity: 0.8;
+  filter: alpha(opacity=50);
+  -webkit-transition: 5s all;
+  transition: 5s all;
+}
 /*# sourceMappingURL=style.min.css.map */

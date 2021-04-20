@@ -25,6 +25,17 @@ body {
   background-color: #8b8b8b;
 }
 
+/* Loader */
+.loader-wrapper {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2000;
+}
+
 #rightSide {
   width: 300px;
   height: 650px;
@@ -163,6 +174,7 @@ body {
   background-image: url(../../images/charizardMini.png);
   background-position: center;
   background-size: contain;
+  background-repeat: no-repeat;
   border-left: solid 8px white;
   border-right: solid 8px white;
   border-bottom: solid 4px white;
@@ -234,6 +246,7 @@ body {
 
 #screen #bottom .tabs-1 #tabs-2 #tab-3-container {
   height: 50px;
+  text-transform: uppercase;
 }
 
 #screen #bottom .tabs-1 #tabs-2 #tab-3-container .tabs-3 {
@@ -270,6 +283,10 @@ body {
   background-color: black;
   border: solid white 3px;
   margin-left: 22px;
+}
+
+#screen #bottom #statsBox #statName {
+  text-transform: uppercase;
 }
 
 #screen #bottom #abilityBox {

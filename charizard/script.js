@@ -75,6 +75,9 @@ let input =
     "weight": 905
 }`
 
+$(window).on("load",function(){
+  $(".loader-wrapper").fadeOut(400)
+})
 
 
 let leftSide = document.getElementById("leftSide");
