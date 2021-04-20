@@ -462,7 +462,50 @@ function createScreen(obj) {
   BOTTOM.appendChild(ABILITYBOX);
   screen.appendChild(TOP);
   screen.appendChild(BOTTOM);
+
+  
+  function changeTabScreen(){
+    if(traits == 1){
+      tab1Run();
+    }else if(traits == 2){
+      tab2Run();
+    }else if(traits == 3){
+      tab3Run();
+    }else if(traits ==4){
+      tab4Run();
+    }else if(traits ==5){
+      tab5Run();
+    }else if(traits ==6){
+      tab6Run();
+    }
+  }
+  
+  let chooseTraitUp = function(){
+      traits++;
+      if(traits > 6){
+        traits = 1;
+      }
+    changeTabScreen();
+  };
+  
+
+  let chooseTraitDown = function(){
+    console.log('piwe')
+      traits--;
+      if(traits < 1){
+        traits = 6;
+      }
+      changeTabScreen();
+  }
+
+  let traits = 1;
+
+  document.getElementById('dPadButton1').addEventListener('click', chooseTraitUp);
+  document.getElementById('dPadButton7').addEventListener('click', chooseTraitDown);
+
+
 }
+
 
 function createRightSide(obj) {
   const STARTWRAP = document.createElement('a');
@@ -472,6 +515,7 @@ function createRightSide(obj) {
   START.setAttribute('id', 'start');
   RIGHTBUTTONS.setAttribute('id', 'rightButtons');
 
+  
   START.addEventListener('click', homePage);
   function homePage(){
     STARTWRAP.href = '../index.html';
