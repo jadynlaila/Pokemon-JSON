@@ -544,7 +544,128 @@ booten3.textContent = 'X'
 booten5.textContent = 'A'
 booten7.textContent = 'B'
 
-// const {}
+aBXY1.addEventListener('click',changePink);
+function changePink(){
+  // background coloring
+  html.style.backgroundColor = 'pink';
+  leftSide.style.backgroundColor = 'pink';
+  rightSide.style.backgroundColor = 'pink';
+  body.style.backgroundColor = 'pink';
+
+  // dpad coloring
+  dPadButton0.style.backgroundColor = 'pink';
+  dPadButton1.style.backgroundColor = 'rgb(216, 162, 171)';
+  dPadButton2.style.backgroundColor = 'pink';
+  dPadButton3.style.backgroundColor = 'rgb(216, 162, 171)';
+  dPadButton4.style.backgroundColor = 'rgb(216, 162, 171)';
+  dPadButton5.style.backgroundColor = 'rgb(216, 162, 171)';
+  dPadButton6.style.backgroundColor = 'pink';
+  dPadButton7.style.backgroundColor = 'rgb(216, 162, 171)';
+  dPadButton8.style.backgroundColor = 'pink';
+
+  // abxy coloring
+  aBXY1.style.backgroundColor = 'rgb(216, 162, 171)';
+  aBXY3.style.backgroundColor = 'rgb(216, 162, 171)';
+  aBXY5.style.backgroundColor = 'rgb(216, 162, 171)';
+  aBXY7.style.backgroundColor = 'rgb(216, 162, 171)';
+
+  // start and select coloring
+  start.style.backgroundColor = 'rgb(216, 162, 171)';
+  select.style.backgroundColor = 'rgb(216, 162, 171)';
+}
+
+
+aBXY3.addEventListener('click',changeBlue);
+function changeBlue(){
+  // background coloring
+  html.style.backgroundColor = 'rgb(0, 0, 161)';
+  leftSide.style.backgroundColor = 'rgb(0, 0, 161)';
+  rightSide.style.backgroundColor = 'rgb(0, 0, 161)';
+  body.style.backgroundColor = 'rgb(0, 0, 161)';
+
+  // dpad coloring
+  dPadButton0.style.backgroundColor = 'rgb(0, 0, 161)';
+  dPadButton1.style.backgroundColor = 'aqua';
+  dPadButton2.style.backgroundColor = 'rgb(0, 0, 161)';
+  dPadButton3.style.backgroundColor = 'aqua';
+  dPadButton4.style.backgroundColor = 'aqua';
+  dPadButton5.style.backgroundColor = 'aqua';
+  dPadButton6.style.backgroundColor = 'rgb(0, 0, 161)';
+  dPadButton7.style.backgroundColor = 'aqua';
+  dPadButton8.style.backgroundColor = 'rgb(0, 0, 161)';
+
+  // abxy coloring
+  aBXY1.style.backgroundColor = 'aqua';
+  aBXY3.style.backgroundColor = 'aqua';
+  aBXY5.style.backgroundColor = 'aqua';
+  aBXY7.style.backgroundColor = 'aqua';
+
+  // start and select coloring
+  start.style.backgroundColor = 'aqua';
+  select.style.backgroundColor = 'aqua';
+}
+
+
+aBXY5.addEventListener('click',changeRed);
+function changeRed(){
+  // background coloring
+  html.style.backgroundColor = 'rgb(168, 0, 0)';
+  leftSide.style.backgroundColor = 'rgb(168, 0, 0)';
+  rightSide.style.backgroundColor = 'rgb(168, 0, 0)';
+  body.style.backgroundColor = 'rgb(168, 0, 0)';
+
+  // dpad coloring
+  dPadButton0.style.backgroundColor = 'rgb(168, 0, 0)';
+  dPadButton1.style.backgroundColor = 'rgb(80, 0, 0)';
+  dPadButton2.style.backgroundColor = 'rgb(168, 0, 0)';
+  dPadButton3.style.backgroundColor = 'rgb(80, 0, 0)';
+  dPadButton4.style.backgroundColor = 'rgb(80, 0, 0)';
+  dPadButton5.style.backgroundColor = 'rgb(80, 0, 0)';
+  dPadButton6.style.backgroundColor = 'rgb(168, 0, 0)';
+  dPadButton7.style.backgroundColor = 'rgb(80, 0, 0)';
+  dPadButton8.style.backgroundColor = 'rgb(168, 0, 0)';
+
+  // abxy coloring
+  aBXY1.style.backgroundColor = 'rgb(80, 0, 0)';
+  aBXY3.style.backgroundColor = 'rgb(80, 0, 0)';
+  aBXY5.style.backgroundColor = 'rgb(80, 0, 0)';
+  aBXY7.style.backgroundColor = 'rgb(80, 0, 0)';
+
+  // start and select coloring
+  start.style.backgroundColor = 'rgb(80, 0, 0)';
+  select.style.backgroundColor = 'rgb(80, 0, 0)';
+}
+
+
+aBXY7.addEventListener('click',changeClear);
+function changeClear(){
+  // background coloring
+  html.style.backgroundColor = '';
+  leftSide.style.backgroundColor = '';
+  rightSide.style.backgroundColor = '';
+  body.style.backgroundColor = '';
+
+  // dpad coloring
+  dPadButton0.style.backgroundColor = '';
+  dPadButton1.style.backgroundColor = '';
+  dPadButton2.style.backgroundColor = '';
+  dPadButton3.style.backgroundColor = '';
+  dPadButton4.style.backgroundColor = '';
+  dPadButton5.style.backgroundColor = '';
+  dPadButton6.style.backgroundColor = '';
+  dPadButton7.style.backgroundColor = '';
+  dPadButton8.style.backgroundColor = '';
+
+  // abxy coloring
+  aBXY1.style.backgroundColor = '';
+  aBXY3.style.backgroundColor = '';
+  aBXY5.style.backgroundColor = '';
+  aBXY7.style.backgroundColor = '';
+
+  // start and select coloring
+  start.style.backgroundColor = '';
+  select.style.backgroundColor = '';
+}
 
 ///popup menu
 
